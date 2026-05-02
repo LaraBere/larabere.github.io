@@ -131,6 +131,37 @@ nav a {
         justify-content: center;
       }
     }
+
+
+    /* GALERÍA DESLIZABLE */
+.slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+/* Oculta scroll feo */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+  scroll-snap-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+/* efecto elegante */
+.slider img:hover {
+  transform: scale(1.05);
+}
   </style>
 </head>
 
