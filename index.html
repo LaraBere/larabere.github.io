@@ -163,6 +163,42 @@ nav a {
 .slider img:hover {
   transform: scale(1.05);
 }
+
+
+/* RSVP FORM */
+.rsvp-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+}
+
+.rsvp-form button {
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: #b76e79;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rsvp-form button:hover {
+  background: #9c5a63;
+}    
   </style>
 </head>
 
@@ -248,10 +284,31 @@ nav a {
   </section>
 
   <!-- RSVP -->
-  <section id="rsvp">
-    <h2>Confirma Asistencia</h2>
-    <p>Pronto podrás confirmar tu asistencia.</p>
-  </section>
+<section id="rsvp">
+  <h2>Confirma Asistencia</h2>
+
+  <form id="rsvpForm" class="rsvp-form">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="Dirección">
+
+    <select required>
+      <option value="">Número de invitados</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3+</option>
+    </select>
+
+    <select>
+      <option value="">Preferencias de comida</option>
+      <option>Normal</option>
+      <option>Vegetariano</option>
+      <option>Vegano</option>
+    </select>
+
+    <button type="submit">Enviar Confirmación</button>
+  </form>
+</section>
 
   <!-- ITINERARIO -->
   <section id="itinerario">
@@ -281,6 +338,11 @@ nav a {
       document.getElementById("minutes").innerHTML = minutes;
       document.getElementById("seconds").innerHTML = seconds;
     }, 1000);
+
+    document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("¡Gracias por confirmar tu asistencia! 💌");
+  });
   </script>
 
 </body>
