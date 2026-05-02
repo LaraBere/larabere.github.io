@@ -142,15 +142,16 @@ nav a {
   scroll-snap-type: x mandatory;
 }
 
-/* Oculta scroll feo */
+/* oculta scrollbar */
 .slider::-webkit-scrollbar {
   display: none;
 }
 
 .slider img {
   flex: 0 0 auto;
-  width: 250px;
-  height: 320px;
+  width: 70vw;
+  max-width: 250px;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 15px;
   scroll-snap-align: center;
