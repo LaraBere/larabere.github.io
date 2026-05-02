@@ -80,6 +80,62 @@
       font-size: 14px;
       color: #777;
     }
+    /* HERO NUEVO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: #f7f7f7;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  color: #a88c8c;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.date {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.countdown-box {
+  display: flex;
+  gap: 40px;
+}
+
+.countdown-box span {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.countdown-box p {
+  font-size: 14px;
+  text-align: center;
+  color: #777;
+}
+
+/* IMAGEN BONITA */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 350px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50% / 60%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
   </style>
 </head>
 
@@ -94,18 +150,35 @@
   </nav>
 
   <!-- HEADER / COUNTDOWN -->
-  <header>
-    <div class="countdown">
-      <h1>Faltan para nuestra boda 💍</h1>
-      <div class="days" id="countdown"></div>
-      <p>Armando & Bere • 28 Noviembre 2026</p>
-    </div>
+<header class="hero">
+  <div class="hero-text">
+    <h1>Armando & Bere</h1>
+    <p class="date">NOS CASAMOS EL 28 DE NOVIEMBRE DE 2026</p>
 
-    <div class="image-container">
-      <!-- Cambia el src por su foto -->
-      <img src="IMG_8982.jpeg" alt="Armando y Bere">
+    <div class="countdown-box">
+      <div>
+        <span id="days">0</span>
+        <p>Días</p>
+      </div>
+      <div>
+        <span id="hours">0</span>
+        <p>Horas</p>
+      </div>
+      <div>
+        <span id="minutes">0</span>
+        <p>Min</p>
+      </div>
+      <div>
+        <span id="seconds">0</span>
+        <p>Seg</p>
+      </div>
     </div>
-  </header>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/IMG_8982.jpeg" alt="Armando y Bere">
+  </div>
+</header>
 
   <!-- HISTORIA -->
   <section id="historia">
@@ -150,23 +223,24 @@
   </footer>
 
   <!-- COUNTDOWN SCRIPT -->
-  <script>
-    const weddingDate = new Date("November 28, 2026 00:00:00").getTime();
+<script>
+const weddingDate = new Date("November 28, 2026 00:00:00").getTime();
 
-    const x = setInterval(function () {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
 
-      document.getElementById("countdown").innerHTML = days + " días";
-
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "¡Hoy es el gran día!";
-      }
-    }, 1000);
-  </script>
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+}, 1000);
+</script>
 
 </body>
 </html>
