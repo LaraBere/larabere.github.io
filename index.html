@@ -5,47 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Boda Armando & Bere</title>
 
+  <!-- FUENTE BONITA -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fafafa;
+      background: #f2f2f2;
       color: #333;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 50px 10%;
-      background: #fff;
-    }
-
-    .countdown {
-      flex: 1;
-    }
-
-    .countdown h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .days {
-      font-size: 48px;
-      font-weight: bold;
-      color: #b76e79;
-    }
-
-    .image-container {
-      flex: 1;
-      text-align: right;
-    }
-
-    .image-container img {
-      max-width: 320px;
-      border-radius: 15px;
-    }
-
+    /* NAV */
     nav {
       background: #b76e79;
       padding: 15px;
@@ -59,6 +30,67 @@
       font-weight: bold;
     }
 
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      background: #f7f7f7;
+      min-height: 90vh;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      color: #a88c8c;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .date {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .countdown-box {
+      display: flex;
+      gap: 40px;
+    }
+
+    .countdown-box span {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .countdown-box p {
+      font-size: 14px;
+      text-align: center;
+      color: #777;
+      margin: 5px 0 0;
+    }
+
+    /* IMAGEN */
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 400px;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 50% / 60%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* SECCIONES */
     section {
       padding: 60px 10%;
       background: #fff;
@@ -80,62 +112,24 @@
       font-size: 14px;
       color: #777;
     }
-    /* HERO NUEVO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 10%;
-  background: #f7f7f7;
-}
 
-.hero-text {
-  flex: 1;
-}
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
 
-.hero-text h1 {
-  font-size: 60px;
-  color: #a88c8c;
-  margin-bottom: 10px;
-  font-family: 'Georgia', serif;
-}
+      .hero-image img {
+        width: 260px;
+        height: 360px;
+        margin-top: 20px;
+      }
 
-.date {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-.countdown-box {
-  display: flex;
-  gap: 40px;
-}
-
-.countdown-box span {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.countdown-box p {
-  font-size: 14px;
-  text-align: center;
-  color: #777;
-}
-
-/* IMAGEN BONITA */
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  width: 350px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 50% / 60%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+      .countdown-box {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
@@ -149,98 +143,86 @@
     <a href="#itinerario">Tu Itinerario</a>
   </nav>
 
-  <!-- HEADER / COUNTDOWN -->
-<header class="hero">
-  <div class="hero-text">
-    <h1>Armando & Bere</h1>
-    <p class="date">NOS CASAMOS EL 28 DE NOVIEMBRE DE 2026</p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Armando & Bere</h1>
+      <p class="date">NOS CASAMOS EL 28 DE NOVIEMBRE DE 2026</p>
 
-    <div class="countdown-box">
-      <div>
-        <span id="days">0</span>
-        <p>Días</p>
-      </div>
-      <div>
-        <span id="hours">0</span>
-        <p>Horas</p>
-      </div>
-      <div>
-        <span id="minutes">0</span>
-        <p>Min</p>
-      </div>
-      <div>
-        <span id="seconds">0</span>
-        <p>Seg</p>
+      <div class="countdown-box">
+        <div>
+          <span id="days">0</span>
+          <p>Días</p>
+        </div>
+        <div>
+          <span id="hours">0</span>
+          <p>Horas</p>
+        </div>
+        <div>
+          <span id="minutes">0</span>
+          <p>Min</p>
+        </div>
+        <div>
+          <span id="seconds">0</span>
+          <p>Seg</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="hero-image">
-    <img src="IMG_8982.jpeg" alt="Armando y Bere">
-  </div>
-</header>
+    <div class="hero-image">
+      <img src="IMG_8982.jpeg" alt="Armando y Bere">
+    </div>
+  </header>
 
   <!-- HISTORIA -->
   <section id="historia">
     <h2>Nuestra Historia</h2>
     <div class="story">
-      Nuestra historia comenzó hace más de 10 años, en tercer semestre de la universidad, mientras cursábamos Teoría de Grafos en la carrera de Matemáticas Aplicadas y Computación. Y como toda buena historia, tenemos versiones distintas de ese primer momento.  
-      <br><br>
-      Él dice que me vio y pensó que yo era “chistosa”… probablemente por el gorro que llevaba ese día.  
-      Yo, en cambio, sabía que él era muy inteligente y pensé que sería una excelente idea pedirle ayuda con álgebra (prioridades claras desde el inicio).  
-      <br><br>
-      Así empezó todo: entre clases, fórmulas y uno que otro pretexto académico.  
-      <br><br>
-      Con el tiempo, comenzamos a coincidir en más materias, ambos fuimos becarios de Banorte, y sin darnos cuenta, lo que empezó como algo casual se fue convirtiendo en algo mucho más importante. Poco a poco, dejamos de coincidir por casualidad… y empezamos a elegir coincidir.  
-      <br><br>
-      Llegó un momento en el que entendimos que nuestro tiempo libre lo queríamos compartir juntos, que las conversaciones no se acababan y que simplemente estábamos mejor el uno con el otro.  
-      <br><br>
-      Hoy, después de todos estos años, sabemos que queremos seguir escribiendo esta historia juntos.  
-      Y por eso, queremos compartir con ustedes la felicidad de este momento tan importante, invitándolos a ser testigos —ante la ley y ante la vida— de nuestro amor.
+      Nuestra historia comenzó hace más de 10 años, en tercer semestre de la universidad...
     </div>
   </section>
 
   <!-- MOMENTOS -->
   <section id="momentos">
     <h2>Nuestros Momentos</h2>
-    <p>Aquí podrás ver fotos y recuerdos especiales de nuestra historia juntos.</p>
+    <p>Aquí podrás ver fotos y recuerdos especiales.</p>
   </section>
 
   <!-- RSVP -->
   <section id="rsvp">
     <h2>Confirma Asistencia</h2>
-    <p>Pronto podrás confirmar tu asistencia a nuestra boda.</p>
+    <p>Pronto podrás confirmar tu asistencia.</p>
   </section>
 
   <!-- ITINERARIO -->
   <section id="itinerario">
     <h2>Tu Itinerario</h2>
-    <p>Información del día del evento, horarios y ubicación.</p>
+    <p>Información del evento.</p>
   </section>
 
   <footer>
     Armando & Bere ❤️ 2026
   </footer>
 
-  <!-- COUNTDOWN SCRIPT -->
-<script>
-const weddingDate = new Date("November 28, 2026 00:00:00").getTime();
+  <!-- SCRIPT -->
+  <script>
+    const weddingDate = new Date("November 28, 2026 00:00:00").getTime();
 
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((distance / (1000 * 60)) % 60);
-  const seconds = Math.floor((distance / 1000) % 60);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
 
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-}, 1000);
-</script>
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+    }, 1000);
+  </script>
 
 </body>
 </html>
