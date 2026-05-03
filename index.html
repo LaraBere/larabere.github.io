@@ -291,25 +291,43 @@ nav a {
   
   <input type="text" name="nombre" placeholder="Nombre completo" required>
 
-  <select name="invitados" required>
-    <option value="">Número de invitados</option>
+  <select name="invitados adultos" required>
+    <option value="">Número de invitados adultos</option>
     <option>1</option>
     <option>2</option>
     <option>3</option>
     <option>4</option>
     <option>5</option>
     <option>6</option>
-    <option>7</option>
-    <option>8</option>
+  </select>
+
+  <select name="invitados niños" required>
+    <option value="">Número de invitados niños</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
   </select>
 
   <select name="comida">
     <option value="">Preferencias de comida</option>
-    <option>Carne de res</option>
         <option>Carne de res</option>
         <option>Carne de pollo</option>
         <option>Carne de ternero</option>
         <option>Carne de cerdo</option>
+  </select>
+
+  <select name="bebida">
+    <option value="">Preferencias de bebida</option>
+        <option>Solo agua</option>
+        <option>Mezcal</option>
+        <option>Vino</option>
+        <option>Cerveza</option>
+        <option>Tequila</option>
+        <option>Whisky</option>
+        <option>Brandy</option>
   </select>
 
   <button type="submit">Enviar Confirmación</button>
@@ -320,7 +338,40 @@ nav a {
   <!-- ITINERARIO -->
   <section id="itinerario">
     <h2>Tu Itinerario</h2>
-    <p>Información del evento.</p>
+
+  <div class="itinerary-container">
+
+    <!-- RECEPCIÓN -->
+    <div class="card">
+      <img src="foto1.jpeg" alt="Recepción">
+      <h3>LA RECEPCIÓN</h3>
+      <p>Sábado, 28 Nov, 2026</p>
+      <p>5:00 PM – 5:30 PM</p>
+      <p>Hacienda Santa Barbara, Huamantla, Tlaxcala</p>
+      <a href="#">Ver mapa</a>
+    </div>
+
+    <!-- CEREMONIA -->
+    <div class="card">
+      <img src="foto2.jpeg" alt="Ceremonia">
+      <h3>LA CEREMONIA</h3>
+      <p>Sábado, 28 Nov, 2026</p>
+      <p>6:00 PM – 7:00 PM</p>
+      <p>Hacienda Santa Barbara, Huamantla, Tlaxcala</p>
+      <a href="#">Ver mapa</a>
+    </div>
+
+    <!-- FIESTA -->
+    <div class="card">
+      <img src="foto3.jpeg" alt="Fiesta">
+      <h3>LA FIESTA</h3>
+      <p>Sábado, 28 Nov, 2026</p>
+      <p>7:00 PM – 12:00 AM</p>
+      <p>Hacienda Santa Barbara, Huamantla, Tlaxcala</p>
+      <a href="#">Ver mapa</a>
+    </div>
+
+  </div>
   </section>
 
   <footer>
