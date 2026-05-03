@@ -199,6 +199,30 @@ nav a {
 .rsvp-form button:hover {
   background: #9c5a63;
 }    
+
+/* SLIDER DE TARJETAS */
+.cards-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+/* cada tarjeta se comporta como slide */
+.cards-slider .card {
+  flex: 0 0 85%;
+  max-width: 320px;
+  scroll-snap-align: center;
+}
+
+/* IMÁGENES UNIFORMES */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}    
   </style>
 </head>
 
@@ -373,6 +397,35 @@ nav a {
 
   </div>
   </section>
+
+  <section id="recomendaciones">
+  <h2>Recomendaciones</h2>
+
+  <div class="slider cards-slider">
+
+    <div class="card">
+      <img src="hacienda.jpg" alt="Hacienda Santa Bárbara">
+      <h3>HOSPEDAJE</h3>
+      <p>Te recomendamos hospedarte en</p>
+      <p><strong>Hacienda Santa Bárbara</strong></p>
+    </div>
+
+    <div class="card">
+      <img src="frio.jpg" alt="Clima frío">
+      <h3>CLIMA</h3>
+      <p>Habrá clima frío durante el evento</p>
+      <p><strong>Lleva abrigo o chamarra</strong></p>
+    </div>
+
+    <div class="card">
+      <img src="malinche.jpg" alt="La Malinche">
+      <h3>EXPERIENCIA</h3>
+      <p>Hiking en La Malinche 🏔️</p>
+      <p>¡Totalmente recomendado!</p>
+    </div>
+
+  </div>
+</section>
 
   <footer>
     Armando & Berenice ❤️ 2026
