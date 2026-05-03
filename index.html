@@ -315,8 +315,7 @@ nav a {
  <form id="rsvpForm" class="rsvp-form" action="https://formspree.io/f/xlgzgbdd" method="POST">
   
   <input type="text" name="nombre" placeholder="Nombre completo" required>
-  <input type="hidden" name="_subject" placeholder="Nueva cobfirmacion RSVP" >
-  <input type="hidden" name="_template" placeholder=" table" >
+
 
   <select name="invitados adultos" required>
     <option value="">Número de invitados adultos</option>
@@ -467,10 +466,13 @@ nav a {
       document.getElementById("seconds").innerHTML = seconds;
     }, 1000);
 
-    document.getElementById("rsvpForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("¡Gracias por confirmar tu asistencia! 💌");
-  });
+      document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+      
+        alert("¡Gracias por confirmar tu asistencia! 💌");
+      
+        this.submit(); // ✅ ahora sí se envía
+      });
   </script>
 
 </body>
