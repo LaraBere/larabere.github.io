@@ -466,13 +466,10 @@ nav a {
       document.getElementById("seconds").innerHTML = seconds;
     }, 1000);
 
-      document.getElementById("rsvpForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-      
-        alert("¡Gracias por confirmar tu asistencia! 💌");
-      
-        this.submit(); // ✅ ahora sí se envía
-      });
+    document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+      alert("¡Gracias por confirmar tu asistencia! 💌");
+    });
+
   </script>
 
 </body>
