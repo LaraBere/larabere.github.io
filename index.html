@@ -287,27 +287,34 @@ nav a {
 <section id="rsvp">
   <h2>Confirma Asistencia</h2>
 
-  <form id="rsvpForm" class="rsvp-form">
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Email" required>
-    <input type="text" placeholder="Dirección">
+ <form id="rsvpForm" class="rsvp-form" action="https://formspree.io/f/xlgzgbdd" method="POST">
+  
+  <input type="text" name="nombre" placeholder="Nombre completo" required>
 
-    <select required>
-      <option value="">Número de invitados</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3+</option>
-    </select>
+  <select name="invitados" required>
+    <option value="">Número de invitados</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+  </select>
 
-    <select>
-      <option value="">Preferencias de comida</option>
-      <option>Normal</option>
-      <option>Vegetariano</option>
-      <option>Vegano</option>
-    </select>
+  <select name="comida">
+    <option value="">Preferencias de comida</option>
+    <option>Carne de res</option>
+        <option>Carne de res</option>
+        <option>Carne de pollo</option>
+        <option>Carne de ternero</option>
+        <option>Carne de cerdo</option>
+  </select>
 
-    <button type="submit">Enviar Confirmación</button>
-  </form>
+  <button type="submit">Enviar Confirmación</button>
+</form>
+  
 </section>
 
   <!-- ITINERARIO -->
